@@ -6,20 +6,29 @@ function HogTile({hog}) {
     const [Hidden, setHidden] = useState(false);
     const [showDetails, setShowDetails] = useState(false);
 
-function handleClicks() {
+function handleClicks({specialty, weight, greased, }) {
     setShowDetails((preShowDetails) => !preShowDetails)
+    return (
+        <div>
+            <h1>{specialty, weight, greased}</h1>
+        </div>
+    )
 }
 
 
-    //hide the hogs
-if(Hidden) return null;
+ 
 
     //show the hogs
-const {name, specialty, image} = hog
+const {name, image} = hog
 
 return (
 <div>
     <div>
+       <HogDetails name={name} image={image}/>
+       <button onClick={handleClicks}>Show Details
+       {showDetails}
+       
+       </button>
         
 
     </div>

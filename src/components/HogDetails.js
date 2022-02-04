@@ -1,9 +1,8 @@
 import React from "react";
 
 
-function HogDetails({hog}) {
-    const {name, specialty, greased, weight, 'highest medal achieved': medal, image } = hog
-console.log(hogs)
+function HogDetails({name, image}) {
+
     return (
      <div>
         <h1>{name}</h1>
